@@ -55,6 +55,16 @@ export default class Message {
 
 	public friend: Friend;
 
+	private isFollowedPrivate: Boolean | null;
+	public get isFollowed(): Boolean | null {
+		return this.isFollowedPrivate;
+	}
+
+	private instancePrivate: String | null;
+	public isSameInstance(): boolean {
+		return this.instancePrivate == null;
+	}
+
 	constructor(ai: 藍, messageOrNote: any, isDm: boolean) {
 		this.ai = ai;
 		this.messageOrNote = messageOrNote;
@@ -67,6 +77,8 @@ export default class Message {
 			userId: this.userId
 		}).then(user => {
 			this.friend.updateUser(user);
+			this.isFollowedPrivate = user.isFollowed;
+			this.instancePrivate = user.host;
 		});
 	}
 
