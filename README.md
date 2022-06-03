@@ -1,5 +1,14 @@
-<h1><p align="center"><img src="./ai.svg" alt="藍" height="200"></p></h1>
-<p align="center">An Ai for Misskey. <a href="./torisetu.md">About Ai</a></p>
+<img src="./ai.svg" alt="藍" height="30px">　<span align="center">An Ai for Misskey. <a href="./torisetu.md">About Ai</a></span>
+
+[Submarin.online](https://submarin.online)用の藍
+
+変更点
+- ローカルユーザー以外はフォローしない
+- 迷路を投稿しない
+
+
+
+<hr>
 
 ## これなに
 Misskey用の日本語Botです。
